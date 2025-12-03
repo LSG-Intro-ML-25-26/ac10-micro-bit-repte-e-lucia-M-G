@@ -20,7 +20,15 @@ def on_button_pressed_b():
 input.on_button_pressed(Button.B, on_button_pressed_b)
 def on_forever():
     if modo == 0:
-        pass
+        temp = input.temperature()
+        if temp > 40:
+            temp = 40
+        altura = temp * 5 / 40
+        basic.clear_screen()
+        for i in range(4):
+            for j in range(4):
+                if j < altura:
+                    led.plot_bar_graph(i, j)
     else:
         pass
     basic.pause(200)

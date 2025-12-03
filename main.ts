@@ -26,8 +26,24 @@ input.onButtonPressed(Button.B, function on_button_pressed_b() {
     
 })
 basic.forever(function on_forever() {
+    let temp: number;
+    let altura: number;
     if (modo == 0) {
+        temp = input.temperature()
+        if (temp > 40) {
+            temp = 40
+        }
         
+        altura = temp * 5 / 40
+        basic.clearScreen()
+        for (let i = 0; i < 4; i++) {
+            for (let j = 0; j < 4; j++) {
+                if (j < altura) {
+                    led.plotBarGraph(i, j)
+                }
+                
+            }
+        }
     } else {
         
     }
