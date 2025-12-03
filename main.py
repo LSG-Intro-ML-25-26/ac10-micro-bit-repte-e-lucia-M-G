@@ -18,3 +18,10 @@ def on_button_pressed_b():
         basic.show_icon(IconNames.HAPPY)
         basic.pause(300)
 input.on_button_pressed(Button.B, on_button_pressed_b)
+def on_forever():
+    if modo == 0:
+        pass
+    else:
+        pass
+    basic.pause(200)
+basic.forever(on_forever)

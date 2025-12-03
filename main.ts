@@ -25,3 +25,12 @@ input.onButtonPressed(Button.B, function on_button_pressed_b() {
     }
     
 })
+basic.forever(function on_forever() {
+    if (modo == 0) {
+        
+    } else {
+        
+    }
+    
+    basic.pause(200)
+})
